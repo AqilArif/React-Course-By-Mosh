@@ -1,6 +1,6 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}",],
+  
   theme: {
     extend: {
       borderRadius: {
@@ -89,6 +89,7 @@ module.exports = {
       98: "24.5rem", // 392px
       100: "25rem", // 400px
     },
-  },
-  plugins: [],
+  
+    plugins: [],
+  }
 }
