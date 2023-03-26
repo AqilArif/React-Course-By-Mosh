@@ -1,0 +1,28 @@
+[
+    {
+      "id": 1,
+      "title": "The Shawshank Redemption",
+      "genre": "Action",
+      "numberInStock": "6",
+      "year": 1994,
+      "rating": 2.5
+    },
+
+    {
+      "id": 2,
+      "title": "The Godfather",
+      "genre": "Thriller",
+      "numberInStock": "5",
+      "year": 1972,
+      "rating": 4.5
+    },
+    
+    {
+      "id": 3,
+      "title": "The Dark Knight",
+      "genre": "Horror",
+      "numberInStock": "9",
+      "year": 2008,
+      "rating": 6.5
+    }
+  ]
