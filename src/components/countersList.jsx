@@ -6,7 +6,7 @@ class CountersList extends Component {
     state = { 
 
         counters: [
-            { id: 1, value: 4 },
+            { id: 1, value: 40 },
             { id: 2, value: 0 },
             { id: 3, value: 0 },
             { id: 4, value: 0 }
@@ -35,6 +35,19 @@ class CountersList extends Component {
         counters[index].value++;
 
         // method to set the counters property to the new counters array.
+
+        this.setState( { counters: counters } );
+     }
+     
+     handleDecrement = (counter) => {
+
+        const counters = [...this.state.counters];
+
+        const index = counters.indexOf(counter);
+
+        counters[index] = { ...counter }
+
+        counters[index].value--;
 
         this.setState( { counters: counters } );
      }
@@ -81,6 +94,7 @@ class CountersList extends Component {
                             counter={counters} 
                             onDelete={this.handleDelete} 
                             onIncrement={this.handleIncrement} 
+                            onDecrement={this.handleDecrement} 
                         />
                     )}
                 </div>

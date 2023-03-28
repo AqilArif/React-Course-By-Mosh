@@ -49,6 +49,27 @@ class Counter extends Component {
                         Increment
                     </button>
                     
+                    {
+                        this.props.counter.value === 0 ? (
+                            <button 
+                                disabled
+                                type='button' 
+                                className='border border-gray-300 opacity-[0.5] cursor-not-allowed rounded-md px-3 bg-gray-300 ml-3' 
+                                onClick={() => this.props.onDecrement(this.props.counter)}
+                            >
+                                Decrement
+                            </button>
+                        ) : (
+                            <button 
+                                type='button' 
+                                className='border border-gray-500 rounded-md px-3 bg-gray-300 ml-3' 
+                                onClick={() => this.props.onDecrement(this.props.counter)}
+                            >
+                                Decrement
+                            </button>
+                        )
+                    }
+                    
                     <button 
                         type='button' 
                         className='rounded-md px-3 bg-red-500 text-white ml-3' 
