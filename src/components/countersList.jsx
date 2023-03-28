@@ -4,7 +4,7 @@ import Counter from './counter';
 class CountersList extends Component {
     
     state = { 
-        
+
         counters: [
             { id: 1, value: 4 },
             { id: 2, value: 0 },
@@ -15,17 +15,28 @@ class CountersList extends Component {
 
      handleIncrement = (counter) => {
 
+        // creates a new array of counters using the spread operator (...) to copy the existing counters state array 
+        // from the component's state.
+
         const counters = [...this.state.counters];
+
+        // the index of the counter parameter in this new array using the indexOf() method.
 
         const index = counters.indexOf(counter);
 
+        // it creates a copy of the counter object at the retrieved index, 
+        // using the spread operator ({...counter}), to avoid directly modifying the state
+
         counters[index] = { ...counter }
+
+        // Finally, the value property of the copied counter object is incremented by one 
+        // and the state is updated using the setState()
 
         counters[index].value++;
 
-        this.setState( { counters: counters } );
+        // method to set the counters property to the new counters array.
 
-        // console.log('asd', this.state.counters[index]);
+        this.setState( { counters: counters } );
      }
 
      handleReset = () => {

@@ -9,8 +9,7 @@ class Counter extends Component {
     //     count: this.props.counter.value,
 
     //     // count: 0,
-        
-    //     // tags: ['tag1', 'tag2', 'tag3'],
+    
     // }
 
     // constructor() {
